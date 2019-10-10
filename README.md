@@ -1,24 +1,29 @@
 # Highcharts-Vue
 
-Official Highcharts wrapper for Vue framework
+模仿官方 Highcharts wrapper for Vue framework
 
 ## Table of Contents
 
-1. [Getting started](#getting-started)
-    1. [Requirements](#requirements)
-    2. [Installation](#installation)
-2. [Using](#using)
-	1. [Registering globally as a plugin](#registering-globally-as-a-plugin)
-	2. [Registering locally in your component](#registering-locally-in-your-component)
-	3. [Implementing stockChart and mapChart](#implementing-stockchart-and-mapchart)
-	4. [Loading maps](#loading-maps)
-	5. [Changing global component tag name](#changing-global-component-tag-name)
-	6. [Chart callback parameter](#chart-callback-parameter)
-  7. [Chart object reference](#chart-object-reference)
-	8. [Using a specific Highcharts instance](#using-a-specific-highcharts-instance)
-3. [Demo app](#demo-app)
-4. [Component Parameters](#component-parameters)
-5. [Useful links](#useful-links)
+- [Highcharts-Vue](#highcharts-vue)
+  - [Table of Contents](#table-of-contents)
+  - [Getting started](#getting-started)
+    - [Requirements](#requirements)
+    - [Installation](#installation)
+    - [Using](#using)
+      - [Registering globally as a plugin](#registering-globally-as-a-plugin)
+      - [Registering locally in your component](#registering-locally-in-your-component)
+    - [Configure](#configure)
+      - [Options parameter](#options-parameter)
+      - [Importing Highcharts modules](#importing-highcharts-modules)
+      - [Implementing stockChart and mapChart](#implementing-stockchart-and-mapchart)
+      - [Loading maps](#loading-maps)
+      - [Changing global component tag name](#changing-global-component-tag-name)
+      - [Chart callback parameter](#chart-callback-parameter)
+      - [Chart object reference](#chart-object-reference)
+      - [Using Highcharts `setOptions()` method](#using-highcharts-setoptions-method)
+  - [Demo app](#demo-app)
+  - [Component Properties](#component-properties)
+  - [Useful links](#useful-links)
 
 ## Getting started
 
