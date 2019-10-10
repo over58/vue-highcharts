@@ -1,9 +1,9 @@
 {
-  "name": "highcharts-vue",
-  "version": "1.0.2",
+  "name": "highcharts-vue-xyc",
+  "version": "1.0.7",
   "description": "Highcharts wrapper Vue component",
-  "main": "dist/highcharts-vue.min.js",
-  "typings": "types/highcharts-vue.d.ts",
+  "main": "dist/highcharts-vue-xyc.min.js",
+  "typings": "types/highcharts-vue-xyc.d.ts",
   "scripts": {
     "test": "jest",
     "build": "webpack",

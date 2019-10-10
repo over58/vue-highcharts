@@ -40,7 +40,7 @@ const generateVueComponent = function (Highcharts) {
       let HC = this.highcharts || Highcharts
 
       if (this.options && HC[this.constructorType]) {
-        this.chart = HC[constructorType](
+        this.chart = HC[this.constructorType](
           this.$refs.chart,
           cloneDeep(this.options),
           this.callback || null

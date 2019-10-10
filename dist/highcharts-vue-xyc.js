@@ -175,7 +175,7 @@ var generateVueComponent = function generateVueComponent(Highcharts) {
       var HC = this.highcharts || Highcharts;
 
       if (this.options && HC[this.constructorType]) {
-        this.chart = HC[constructorType](this.$refs.chart, Object(__WEBPACK_IMPORTED_MODULE_0_lodash__["cloneDeep"])(this.options), this.callback || null);
+        this.chart = HC[this.constructorType](this.$refs.chart, Object(__WEBPACK_IMPORTED_MODULE_0_lodash__["cloneDeep"])(this.options), this.callback || null);
       } else {
         !this.options ? console.warn('The "options" parameter was not passed.') : console.warn("'".concat(this.constructorType, "' constructor-type is incorrect. Sometimes this error is caused by the fact, that the corresponding module wasn't imported."));
       }
