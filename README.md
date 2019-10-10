@@ -1,10 +1,10 @@
-# Highcharts-Vue
+# highcharts-vue-xyc
 
 模仿官方 Highcharts wrapper for Vue framework
 
 ## Table of Contents
 
-- [Highcharts-Vue](#highcharts-vue)
+- [highcharts-vue-xyc](#highcharts-vue-xyc)
   - [Table of Contents](#table-of-contents)
   - [Getting started](#getting-started)
     - [Requirements](#requirements)
@@ -34,20 +34,20 @@
 
 ### Installation
 
-Install `highcharts-vue` package by:
+Install `highcharts-vue-xyc` package by:
 
 ```cli
-npm install highcharts-vue
+npm install highcharts-vue-xyc
 ```
 ### Using
-There are two ways of adding Highcharts-Vue wrapper to your project:
+There are two ways of adding highcharts-vue-xyc wrapper to your project:
 
 #### Registering globally as a plugin
-The way described below is recommended when wanted to make a wrapper component available from everywhere in your app. In your main app file should have Vue and Highcharts-Vue packages imported:
+The way described below is recommended when wanted to make a wrapper component available from everywhere in your app. In your main app file should have Vue and highcharts-vue-xyc packages imported:
 
 ```js
 import Vue from 'vue'
-import HighchartsVue from 'highcharts-vue'
+import HighchartsVue from 'highcharts-vue-xyc'
 ```
 Next, you can register it as a plugin in your Vue object:
 ```js
@@ -55,10 +55,10 @@ Vue.use(HighchartsVue)
 ```
 
 #### Registering locally in your component
-This option is recommended for direct use in specific components of your app. First, you should import the Chart component object from Highcharts-Vue package in your component file:
+This option is recommended for direct use in specific components of your app. First, you should import the Chart component object from highcharts-vue-xyc package in your component file:
 
 ```js
-import {Chart} from 'highcharts-vue'
+import {Chart} from 'highcharts-vue-xyc'
 ```
 Then, you've to register it in your Vue instance configuration, namely in `components`  section:
 
@@ -70,12 +70,12 @@ Then, you've to register it in your Vue instance configuration, namely in `compo
 }
 ```
 *NOTE:*
-*If you would like to use Highcharts-Vue wrapper by attaching it using `<script>` tag in your `<head>` section of HTML document, of course it is possible and you should use one of .js files from `dist` of this package directory. After that, the `HighchartsVue` object should be available from `window` scope. Here is the example with this way of implementation: [JSFiddle example](https://jsfiddle.net/BlackLabel/ukc2kqnb/)*
+*If you would like to use highcharts-vue-xyc wrapper by attaching it using `<script>` tag in your `<head>` section of HTML document, of course it is possible and you should use one of .js files from `dist` of this package directory. After that, the `HighchartsVue` object should be available from `window` scope. Here is the example with this way of implementation: [JSFiddle example](https://jsfiddle.net/BlackLabel/ukc2kqnb/)*
 
 ### Configure
 
 #### Options parameter
-If you've done one of the above (importing and registering the wrapper), it allows you to use the Highcharts-Vue component in your app, just by adding `<highcharts>` html element, and passing chart configuration object by its `:options` parameter, which is **required**:
+If you've done one of the above (importing and registering the wrapper), it allows you to use the highcharts-vue-xyc component in your app, just by adding `<highcharts>` html element, and passing chart configuration object by its `:options` parameter, which is **required**:
 
 ```html
 <highcharts :options="chartOptions"></highcharts>
@@ -106,7 +106,7 @@ exportingInit(Highcharts)
 ```
 #### Implementing stockChart and mapChart
 
-Highcharts-Vue wrapper uses `chart` constructor by default, so if you need to implement `stockChart` or `mapChart`,  just add `stock` or `map` module as described above and use `:constructor-type` parameter in your html component element:
+highcharts-vue-xyc wrapper uses `chart` constructor by default, so if you need to implement `stockChart` or `mapChart`,  just add `stock` or `map` module as described above and use `:constructor-type` parameter in your html component element:
 ```js
 import Highcharts from 'highcharts'
 import stockInit from 'highcharts/modules/stock'
@@ -135,7 +135,7 @@ If you won't install a package with all maps, there is an option to choose neces
 If you would like to use global component tag name other than `<highcharts>`, you could achieve that by passing object with `tagName: [TAG_NAME]` pair as an option argument when registering the plugin, for example:
 ```js
 import Vue from 'vue'
-import HighchartsVue from 'highcharts-vue'
+import HighchartsVue from 'highcharts-vue-xyc'
 
 Vue.use(HighchartsVue, {tagName: 'charts'})
 ``` 
@@ -175,7 +175,7 @@ The **first one** is by setting a Highcharts instance while registering a wrappe
 ```js
 import Vue from 'vue'
 import Highcharts from 'highcharts'
-import HighchartsVue from 'highcharts-vue'
+import HighchartsVue from 'highcharts-vue-xyc'
 
 Vue.use(HighchartsVue, {
 	highcharts: Highcharts
