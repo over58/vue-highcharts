@@ -63,9 +63,16 @@ module.exports = {
     overlay: true
   },
   performance: {
-    hints: false
+    hints: 'warning',
+    maxEntrypointSize: 1048576, // 入口文件最大值为1M
+    maxAssetSize: 3145728, // 资源文件最大值为3M
+    assetFilter: function (assetFilename) {
+      // 只给出js文件的性能提示
+      return assetFilename.endsWith('.js')
+    }
   },
-  devtool: '#eval-source-map'
+  devtool:
+    process.env.NODE_ENV === 'production' ? 'none' : 'cheap-eval-source-map'
 }
 
 if (process.env.NODE_ENV === 'production') {
