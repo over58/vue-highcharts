@@ -1,7 +1,7 @@
 # Highcharts-Vue
 
 模仿官方 Highcharts wrapper for Vue framework
-test
+
 ## Table of Contents
 
 - [Highcharts-Vue](#highcharts-vue)
