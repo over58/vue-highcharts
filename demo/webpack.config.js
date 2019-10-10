@@ -1,5 +1,5 @@
 var path = require('path')
-var webpack = require('webpack')
+// var webpack = require('webpack')
 
 module.exports = {
   entry: './src/main.js',
@@ -9,6 +9,9 @@ module.exports = {
     filename: 'build.js'
   },
   mode: 'production',
+  optimization: {
+    minimize: true
+  },
   module: {
     rules: [
       {
@@ -71,16 +74,16 @@ module.exports = {
       return assetFilename.endsWith('.js')
     }
   },
-  devtool:
-    process.env.NODE_ENV === 'production' ? 'none' : 'cheap-eval-source-map'
+  devtool: 'cheap-eval-source-map'
 }
 
 if (process.env.NODE_ENV === 'production') {
-  module.exports.devtool = '#source-map'
+  delete module.exports.devtool
   // http://vue-loader.vuejs.org/en/workflow/production.html
-  module.exports.plugins = (module.exports.plugins || []).concat([
-    new webpack.LoaderOptionsPlugin({
-      minimize: true
-    })
-  ])
+  // 这个插件只是用来从webpack1 迁移到 webpack2, 未来可能被删除
+  // module.exports.plugins = (module.exports.plugins || []).concat([
+  //   new webpack.LoaderOptionsPlugin({
+  //     minimize: true
+  //   })
+  // ])
 }
