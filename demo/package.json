@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "highcharts": "^7.0.1",
-    "highcharts-vue-xyc": "1.0.7",
+    "highcharts-vue-xyc": "1.0.8",
     "vue": "^2.5.11"
   },
   "browserslist": [
